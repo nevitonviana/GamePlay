@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:gameplay/components/themas/themas.dart';
+import '/components/themas/themas.dart';
+import '/components/widget/button/buttonCustom.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
               Stack(
                 children: [
                   Padding(
-                      padding: const EdgeInsets.only(top: 55),
+                      padding: const EdgeInsets.only(top: 30),
                       child: Images.backgroundImage),
                   Padding(
                     padding: const EdgeInsets.only(top: 60),
@@ -41,6 +42,10 @@ class _LoginPageState extends State<LoginPage> {
                 "Crie grupos para jogar seus games \n favoritos com seus amigos",
                 style: TextStyles.fontsInter300,
                 textAlign: TextAlign.center,
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: constraints.maxHeight * 0.06),
+                child: ButtonCustom(),
               ),
             ],
           ),
