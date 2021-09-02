@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+import '/components/widget/widget.dart';
 import '/components/themas/themas.dart';
 
 class HomePage extends StatefulWidget {
@@ -77,76 +78,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: 20, left: 10),
-                  height: 120,
-                  child: GridView(
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 1,
-                    ),
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Container(
-                        height: 120,
-                        width: 104,
-                        padding: EdgeInsets.only(left: 5),
-                        child: Card(
-                          color: ThemasColors.primaryColor,
-                          shape: BeveledRectangleBorder(
-                            borderRadius: BorderRadius.circular(6),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                height: 48,
-                                width: 48,
-                                child: Images.logo,
-                              ),
-                              Text("Ranqueado",style: TextStyles.fontsRajdhani15,),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 120,
-                        width: 104,
-                        padding: EdgeInsets.only(left: 5),
-                        child: Card(
-                          color: ThemasColors.primaryColor,
-                          shape: BeveledRectangleBorder(
-                            borderRadius: BorderRadius.circular(6),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 120,
-                        width: 104,
-                        padding: EdgeInsets.only(left: 5),
-                        child: Card(
-                          color: ThemasColors.primaryColor,
-                          shape: BeveledRectangleBorder(
-                            borderRadius: BorderRadius.circular(6),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 120,
-                        width: 104,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5)),
-                        padding: EdgeInsets.only(left: 5),
-                        child: Card(
-                          color: ThemasColors.primaryColor,
-                          shape: BeveledRectangleBorder(
-                            borderRadius: BorderRadius.circular(6),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                Categoria(),
                 Padding(
                   padding: const EdgeInsets.only(top: 35, left: 10, right: 10),
                   child: Row(
