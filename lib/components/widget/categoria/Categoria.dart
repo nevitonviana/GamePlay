@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '/components/themas/themas.dart';
 
 class Categoria extends StatelessWidget {
@@ -9,7 +10,6 @@ class Categoria extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 20, left: 10),
       height: 120,
       child: GridView(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -20,7 +20,6 @@ class Categoria extends StatelessWidget {
           Container(
             height: 120,
             width: 104,
-            padding: EdgeInsets.only(left: 5),
             child: Card(
               color: ThemasColors.primaryColor,
               shape: BeveledRectangleBorder(

@@ -78,7 +78,10 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                Categoria(),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20, left: 10),
+                  child: Categoria(),
+                ),
                 Padding(
                   padding: const EdgeInsets.only(top: 35, left: 10, right: 10),
                   child: Row(

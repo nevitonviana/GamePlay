@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'pages/pages.dart';
+import 'package:gameplay/pages/agendar.dart';
+
 
 import 'components/themas/themas.dart';
 
@@ -10,9 +11,9 @@ void main() {
       theme: ThemeData(
         primaryColor: ThemasColors.primaryColor,
         scaffoldBackgroundColor: ThemasColors.backgroundColor,
-        appBarTheme: AppBarTheme(backgroundColor: ThemasColors.backgroundColor)
+        appBarTheme: AppBarTheme(backgroundColor: ThemasColors.primaryColor),
       ),
-      home: HomePage(),
+      home: Agendar(),
     ),
   );
 }

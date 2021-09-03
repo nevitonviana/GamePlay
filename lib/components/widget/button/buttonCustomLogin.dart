@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '/components/themas/themas.dart';
 
-class ButtonCustom extends StatelessWidget {
-  const ButtonCustom({Key? key}) : super(key: key);
+class ButtonCustomLogin extends StatelessWidget {
+  const ButtonCustomLogin({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
