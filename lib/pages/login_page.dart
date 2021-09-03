@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '/components/themas/themas.dart';
-import '/components/widget/button/buttonCustomLogin.dart';
+import '/components/widget/button/discord_button.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -45,7 +45,9 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Padding(
                 padding: EdgeInsets.only(top: constraints.maxHeight * 0.06),
-                child: ButtonCustomLogin(),
+                child: DiscordButton(
+                  text: "Entrar com Discord",
+                ),
               ),
             ],
           ),

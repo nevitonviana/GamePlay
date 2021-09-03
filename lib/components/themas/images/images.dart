@@ -24,5 +24,13 @@ class Images {
     height: 30,
     width: 30,
   );
+  static final img = Image.asset(
+    "assets/images/img.png",
+    height: 234,fit: BoxFit.fitWidth,
+  );
+  static final imgOpacity = Image.asset(
+    "assets/images/imgOpacity.png",
+    height: 234,fit: BoxFit.fitWidth,
+  );
 }
 // multiply

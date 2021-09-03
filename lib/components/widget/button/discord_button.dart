@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 import '/components/themas/themas.dart';
 
-class ButtonCustomLogin extends StatelessWidget {
-  const ButtonCustomLogin({Key? key}) : super(key: key);
+class DiscordButton extends StatelessWidget {
+  final String text;
+  const DiscordButton({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +13,8 @@ class ButtonCustomLogin extends StatelessWidget {
         color: ThemasColors.redButton,
         borderRadius: BorderRadius.circular(6),
       ),
-      width: 275,
-      height: 56,
+      // width: 275,
+      // height: 56,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -28,7 +29,7 @@ class ButtonCustomLogin extends StatelessWidget {
           Expanded(
             flex: 4,
             child: Text(
-              "Entrar com Discord",
+             text,
               style: TextStyles.fontsInter500,
               textAlign: TextAlign.center,
             ),
