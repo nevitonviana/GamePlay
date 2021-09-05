@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:gameplay/pages/agendar.dart';
-import 'package:gameplay/pages/detalhes_do_servidor.dart';
+import 'package:flutter/services.dart';
 
 import 'components/themas/themas.dart';
+import 'pages/pages.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
   runApp(
     MaterialApp(
       title: 'GamePlay',
@@ -13,7 +14,7 @@ void main() {
         scaffoldBackgroundColor: ThemasColors.backgroundColor,
         appBarTheme: AppBarTheme(backgroundColor: ThemasColors.primaryColor),
       ),
-      home: DetalhesDoServidor(),
+      home: LoginPage(),
     ),
   );
 }

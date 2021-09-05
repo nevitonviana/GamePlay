@@ -12,6 +12,19 @@ class Agendar extends StatefulWidget {
 }
 
 class _AgendarState extends State<Agendar> {
+  serve() {
+    BottomSheet(
+      onClosing: () {},
+      builder: (context) {
+        return Container(
+          height: 500,
+          width: 200,
+          color: Colors.green,
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,43 +48,109 @@ class _AgendarState extends State<Agendar> {
                     ),
                   ),
                   Categoria(),
-                  Container(
-                    margin: EdgeInsets.only(
-                      top: 30,
-                    ),
-                    height: 68,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: ThemasColors.primaryColor),
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            width: 64,
+                  GestureDetector(
+                    onTap: () {
+                      showModalBottomSheet(
+                        isScrollControlled: true,
+                        elevation: 6,
+                        backgroundColor: Colors.transparent,
+                        context: context,
+                        builder: (context) {
+                          return Container(
+                            height: constraints.maxHeight * 0.85,
                             color: ThemasColors.primaryColor,
-                          ),
-                        ),
-                        Expanded(
-                          flex: 4,
-                          child: Container(
-                            child: Text(
-                              "Selecione um Servidor",
-                              style: TextStyles.fontsRajdhaniBold18,
-                              textAlign: TextAlign.center,
+                            child: ListView.builder(
+                              itemBuilder: (context, index) {
+                                return Container(
+                                  margin: EdgeInsets.only(
+                                      left: 15, right: 15, top: 20),
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        child: Container(
+                                          width: 64,
+                                          height: 68,
+                                          color: Colors.orange,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Expanded(
+                                        flex: 4,
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              "Rumo ao topo",
+                                              style: TextStyles
+                                                  .fontsRajdhaniBold18,
+                                            ),
+                                            Divider(
+                                              height: 7,
+                                            ),
+                                            Text(
+                                              "Counter Strike: Global Offensive",
+                                              style: TextStyles.fontsInter13,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: Icon(
+                                          Icons.arrow_forward_ios_sharp,
+                                          color: ThemasColors.whiteText,
+                                          size: 15,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              },
+                            ),
+                          );
+                        },
+                      );
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        top: 30,
+                      ),
+                      height: 68,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: ThemasColors.primaryColor),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              width: 64,
+                              color: ThemasColors.primaryColor,
                             ),
                           ),
-                        ),
-                        Expanded(
-                          child: Container(
-                            child: Icon(
-                              Icons.arrow_forward_ios_sharp,
-                              color: ThemasColors.whiteText,
-                              size: 15,
+                          Expanded(
+                            flex: 4,
+                            child: Container(
+                              child: Text(
+                                "Selecione um Servidor",
+                                style: TextStyles.fontsRajdhaniBold18,
+                                textAlign: TextAlign.center,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                          Expanded(
+                            child: Container(
+                              child: Icon(
+                                Icons.arrow_forward_ios_sharp,
+                                color: ThemasColors.whiteText,
+                                size: 15,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Padding(
@@ -133,8 +212,12 @@ class _AgendarState extends State<Agendar> {
                     maxLines: 4,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 35),
-                    child: ButtonSubmit(text: "Agendar", width: constraints.maxHeight * 0.7,),
+                    padding: EdgeInsets.only(
+                        top: constraints.maxHeight * 0.08, bottom: 20),
+                    child: ButtonSubmit(
+                      text: "Agendar",
+                      width: constraints.maxHeight * 0.7,
+                    ),
                   ),
                 ],
               ),

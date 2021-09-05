@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gameplay/pages/pages.dart';
 
 import '/components/themas/themas.dart';
 import '/components/widget/button/discord_button.dart';
@@ -18,16 +19,21 @@ class _LoginPageState extends State<LoginPage> {
         return Scaffold(
           body: Column(
             children: [
-              Stack(
-                children: [
-                  Padding(
-                      padding: const EdgeInsets.only(top: 30),
-                      child: Images.backgroundImage),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 60),
-                    child: Images.fighter,
-                  ),
-                ],
+              Container(
+                height: constraints.maxHeight * 0.6,
+                child: Stack(
+                  children: [
+                    Padding(
+                        padding:
+                            EdgeInsets.only(top: constraints.maxHeight * 0.03),
+                        child: Images.backgroundImage),
+                    Padding(
+                      padding:
+                          EdgeInsets.only(top: constraints.maxHeight * 0.05),
+                      child: Images.fighter,
+                    ),
+                  ],
+                ),
               ),
               Text(
                 "Conecte-se\n e organize suas  \njogatinas",
@@ -44,9 +50,18 @@ class _LoginPageState extends State<LoginPage> {
                 textAlign: TextAlign.center,
               ),
               Padding(
-                padding: EdgeInsets.only(top: constraints.maxHeight * 0.06),
-                child: DiscordButton(
-                  text: "Entrar com Discord",
+                padding: EdgeInsets.only(top: constraints.maxHeight * 0.04),
+                child: Container(
+                  width: 275,
+                  child: DiscordButton(
+                    onTap: () => Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => HomePage(),
+                        ),
+                        (route) => false),
+                    text: "Entrar com Discord",
+                  ),
                 ),
               ),
             ],

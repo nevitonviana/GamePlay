@@ -63,4 +63,15 @@ class TextStyles {
     fontWeight: FontWeight.bold,
     color: ThemasColors.whiteText,
   );
+
+  static final fontsRajdhaniBold24Red = GoogleFonts.rajdhani(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    color: ThemasColors.redButton,
+  );
+  static final fontsRajdhaniW500 = GoogleFonts.rajdhani(
+    fontSize: 24,
+    fontWeight: FontWeight.w500,
+    color: ThemasColors.whiteText,
+  );
 }
