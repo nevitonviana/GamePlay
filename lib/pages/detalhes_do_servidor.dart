@@ -88,6 +88,7 @@ class _DetalhesDoServidorState extends State<DetalhesDoServidor> {
                         child: Container(
                           margin: EdgeInsets.only(bottom: 25),
                           child: ListView.builder(
+
                             itemBuilder: (BuildContext context, int index) {
                               return Row(
                                 children: [
