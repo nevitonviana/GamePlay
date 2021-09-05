@@ -26,11 +26,28 @@ class Images {
   );
   static final img = Image.asset(
     "assets/images/img.png",
-    height: 234,fit: BoxFit.fitWidth,
+    height: 234,
+    fit: BoxFit.fitWidth,
   );
   static final imgOpacity = Image.asset(
     "assets/images/imgOpacity.png",
-    height: 234,fit: BoxFit.fitWidth,
+    height: 234,
+    fit: BoxFit.fitWidth,
+  );
+  static final rpg = Image.asset(
+    "assets/images/rpg.png",
+  );
+  static final ranqueado = Image.asset(
+    "assets/images/ranqueado.png",
+  );
+  static final diversao = Image.asset(
+    "assets/images/diversão.png",
+  );
+  static final iX1 = Image.asset(
+    "assets/images/1X1.png",
+  );
+  static final csgo = Image.asset(
+    "assets/images/csgo.png",
   );
 }
 // multiply

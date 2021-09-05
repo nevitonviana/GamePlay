@@ -79,7 +79,7 @@ class _DetalhesDoServidorState extends State<DetalhesDoServidor> {
                             style: TextStyles.fontsInter13,
                           ),
                           Text(
-                            "3",
+                            "1",
                             style: TextStyles.fontsInter13,
                           ),
                         ],
@@ -88,14 +88,16 @@ class _DetalhesDoServidorState extends State<DetalhesDoServidor> {
                         child: Container(
                           margin: EdgeInsets.only(bottom: 25),
                           child: ListView.builder(
-
+                            itemCount: 1,
                             itemBuilder: (BuildContext context, int index) {
                               return Row(
                                 children: [
                                   Container(
-                                    height: 48,
-                                    width: 48,
-                                    color: Colors.orange,
+                                      height: 48,
+                                      width: 48,
+                                      child: Image.network(
+                                        "https://img1.gratispng.com/20180319/owq/kisspng-computer-icons-user-profile-clip-art-icon-profile-size-5ab030157502a2.7195773715214960854793.jpg",
+                                      ),
                                   ),
                                   Expanded(
                                     child: ListTile(

@@ -58,13 +58,17 @@ class _HomePageState extends State<HomePage> {
                                         ],
                                       ),
                                     ),
-
                                     Padding(
-                                      padding:  EdgeInsets.only(top: 25, bottom: 25),
+                                      padding:
+                                          EdgeInsets.only(top: 25, bottom: 25),
                                       child: Row(
                                         children: [
                                           Expanded(
-                                            child: ButtonSubmit(text: "Não", colors: ThemasColors.backgroundColor,),
+                                            child: ButtonSubmit(
+                                              text: "Não",
+                                              colors:
+                                                  ThemasColors.backgroundColor,
+                                            ),
                                           ),
                                           SizedBox(
                                             width: 10,
@@ -161,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                             style: TextStyles.fontsInter13,
                             children: [
                               TextSpan(
-                                text: "6",
+                                text: "1",
                                 style: TextStyles.fontsInter13,
                               ),
                             ]),
@@ -174,6 +178,7 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 15, vertical: 10),
                     child: ListView.builder(
+                      itemCount: 1,
                       itemBuilder: (BuildContext context, int index) {
                         return GestureDetector(
                           onTap: () => Navigator.push(
@@ -192,7 +197,7 @@ class _HomePageState extends State<HomePage> {
                                     Container(
                                       height: 64,
                                       width: 68,
-                                      color: Colors.orange,
+                                      child: Images.csgo,
                                     ),
                                     Expanded(
                                       flex: 4,
@@ -260,7 +265,7 @@ class _HomePageState extends State<HomePage> {
                                                 padding: const EdgeInsets.only(
                                                     left: 15),
                                                 child: Text(
-                                                  "3",
+                                                  "1",
                                                   style:
                                                       TextStyles.fontsInter13,
                                                 ),
@@ -286,7 +291,6 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                
               ],
             ),
           );
